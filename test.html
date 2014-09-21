@@ -1,0 +1,22 @@
+<script>
+ArticleProvider = function(host, port) {
+};
+
+ArticleProvider.prototype.getCollection= function(callback) {
+  article_collection="busy";
+  callback(null, article_collection);
+  };
+
+
+ArticleProvider.prototype.save = function(articles, callback) {
+this.getCollection(function(error, article_collection) {
+console.log(article_collection);
+  callback(null, article_collection);
+});
+};
+
+var articleProvider=new ArticleProvider("","");
+articleProvider.save("",function(error,docs){
+console.log(docs);
+})
+</script>
