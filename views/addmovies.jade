@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1= title
+		form#formAddUser(name="addmovies",method="post",action="/movies/save")
+			input#inputMovieTitle(type="text", placeholder="Title", name="title")
+			input#inputDesc(type="text", placeholder="description", name="desc")
+			input#inputDirector(type="text", placeholder="Director", name="director")
+			input#inputStars(type="text", placeholder="Stars", name="stars")
+			button#btnSubmit(type="submit") submit

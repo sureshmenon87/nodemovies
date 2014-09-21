@@ -1,0 +1,8 @@
+h1= title
+#movies
+	
+		div.title
+			a(href="/movies/"+movie._id.toHexString())=movie.title
+		div.director= movie.director
+		div.stars= movie.stars
+		div.body= movie.desc
